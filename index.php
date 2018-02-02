@@ -87,20 +87,35 @@
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
-                <div class="main-category-icon">
-                    <a href="#">
-                        <i class="demo-icon icon-a_1"></i>
-                        <div class="category-name">국가1</div>
-                    </a>
-                </div>
+                 
+                    <!-- 첫번째탭시작 -->
+                    <?php for($i=0; $i<16; $i++){ ?>
+                <div class="main-category-icon"> 
+							<a href="/search/index.do?index=ALL&amp;brmFF=OC0001&amp;currentPage=1&amp;countPerPage=3">
+								<i class="demo-icon icon-b_1"></i>
+								<div class="category-name">교육</div>
+							</a>
+                        </div> 
+
+                    <?php } ?>
+
+                        <!-- 첫번째탭종료 -->
             </div>
             <div role="tabpanel" class="tab-pane" id="profile">
-                <div class="main-category-icon">
-                    <a href="#">
-                        <i class="demo-icon icon-a_1"></i>
-                        <div class="category-name">데이터1</div>
-                    </a>
-                </div>
+            
+                    <!-- 두번째탭시작 -->
+                    <?php for($i=0; $i<16; $i++){ ?>
+                <div class="main-category-icon"> 
+							<a style="padding-top:10px;" href="/search/index.do?index=ALL&amp;brmFF=OC0001&amp;currentPage=1&amp;countPerPage=3">
+								<i class="fas fa-beer fa-3x"></i>
+								<div style="padding-top:7px;" class="category-name">맥주집</div>
+							</a>
+                        </div> 
+
+                    <?php } ?>
+
+                        <!-- 두번째탭종료 -->
+
             </div>
         </div>
     </div>

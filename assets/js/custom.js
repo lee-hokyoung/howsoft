@@ -1,4 +1,35 @@
 $(document).ready(function(){
+    var pathname = location.pathname;
+    switch (pathname){
+        case '/':
+        case '/index.php':
+            var main_tab_icon = $('.main-category-icon');
+            var img, hover_img;
+            var width_img = main_tab_icon.css('width');
+          //  main_tab_icon.each(function(){
+          //      $(this).css({
+           //         'height':width_img
+           //     });
+            //});
+
+            // console.log(main_tab_icon);
+            // main_tab_icon.each(function(){
+            //     console.log($(this));
+            //     img = $(this).attr('data-default');
+            //     hover_img = $(this).attr('data-hover');
+            //     console.log(img, hover_img, width_img);
+            //     $(this).css({
+            //         'background-image':'url(assets/img/' + img + ')',
+            //         'background-size':width_img,
+            //         'height': width_img
+            //     });
+            //     $(this).hover(
+            //         function(){$(this).css({'background-image':'url(assets/img/' + img + ')'})},
+            //         function(){$(this).css({'background-image':'url(assets/img/' + hover_img + ')'})}
+            //     );
+            // });
+            break;
+    }
     var slider = $('.slider-menu');
     var sub_menu = $('.sub-menu');
     // 메뉴 슬라이더
@@ -84,6 +115,8 @@ $(document).ready(function(){
     // 메인화면 탭
     $('li[role=presentation] a').mouseover(function(){
         var tab_name = $(this).attr('aria-controls');
+        $(this).parent().parent().find('li').removeClass('active');
+        $(this).parent().addClass('active');
         $('div[role=tabpanel]').removeClass('active');
         $('div[role=tabpanel]' + '#' + tab_name).addClass('active');
     });
@@ -136,3 +169,5 @@ $(document).ready(function(){
         }
     });
 });
+
+

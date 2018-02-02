@@ -63,26 +63,28 @@
                                 <td></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <img src="assets/img/botdetectcaptcha.jpg">
-                                </td>
-                            </tr>
-                            <tr>
                                 <th scope="row">
                                     <span><em class="hiden">별표시</em></span>
-                                    <label for="text">자동가입 방지 문자입력</label>
+                                    <label for="text">자동가입 방지</label>
                                 </th>
                                 <td>
-                                    <input type="text" class="inp2" id="password2" data-valid-max-byte="20">
+                                    <div class="g-recaptcha" data-sitekey="6LcTt0MUAAAAANS6YgnDocoACTJKO55WlT4GiEsp"></div>
                                 </td>
                                 <td></td>
-                            </tr>
+                            </tr> 
                         </tbody>
                     </table>
+                    <div style="margin-top:10px;">
+                      <input type="button" value="확인"/>
+                      <input type="button" value="취소"/>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div style="clear: both;"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 <?php include 'include/footer.html';?>
